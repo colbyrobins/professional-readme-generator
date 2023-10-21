@@ -1,5 +1,7 @@
 const inquirer = require('inquirer')
 const fs = require('fs');
+const utils = require('./utils/generateMarkdown.js');
+
 
 const questions = [
     {
@@ -38,24 +40,38 @@ const questions = [
         type: 'input',
         name: 'test',
         message: 'Please provide test instructions:'
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Please provide installation instructions:'
+    },
+    {
+        type: 'input', 
+        name: 'username',
+        message: "Please provide your Github username:"
+    },
+    {
+        type: 'input', 
+        name: 'email',
+        message: "Please provide your email:"
     }
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log('Success!')
+    );
+}
 
-// TODO: Create a function to initialize app
+
 function init() {
-    inquirer.prompt(questions).then(answers => {
-        console.log('Project Description:', answers.description);
-        console.log('Installation Instructions:', answers.installation);
-        console.log('Usage Information:', answers.usage);
-        console.log('Contribution Guidelines:', answers.contribution);
-        console.log('Test Instructions:', answers.test);
-        console.log('License:', answers.license);
-
+    inquirer.prompt(questions)
+        .then(answers => {
+            let markdown = utils.generateMarkdown(answers);
+            console.log(markdown);
+            writeToFile("README-Template.md", markdown)
       });
 }
 
-// Function call to initialize app
 init();
