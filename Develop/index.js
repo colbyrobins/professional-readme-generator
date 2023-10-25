@@ -60,7 +60,7 @@ const questions = [
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log('Success!')
+    err ? console.error(err) : console.log(`Success! ${fileName} created.`)
     );
 }
 
@@ -69,7 +69,6 @@ function init() {
     inquirer.prompt(questions)
         .then(answers => {
             let markdown = utils.generateMarkdown(answers);
-            console.log(markdown);
             writeToFile("README-Template.md", markdown)
       });
 }

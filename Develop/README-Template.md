@@ -1,8 +1,9 @@
-# readme
+# Professional README CLI Generator
+  
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
 
 ## Description
-this created a readme 
+This project was created to automation the creation of a README file for your project.
 
 ## Table of Contents
 
@@ -13,26 +14,25 @@ this created a readme
 * [License](#License)
 * [Contribution Guidelines](#contribution-guidelines)
 * [Test Instructions](#test-instructions)
-* [Questions](#Questions)
 
 
 ## Installation 
-
+To install, clone the repository: git clone git@github.com:colbyrobins/professional-readme-generator.git
 
 ## Usage
-node index
+To use this tool, watch the tutorial video.
 
 ## License
 This project is covered under the MIT license.
 
 ## Contribution Guidelines
-Close the repo and merge via a PR
+If you would like to contribute, create a pull request with your changes.
 
 ## Test Instructions 
+No testing instructions at this time.
 
-
-## Questions
+## Questions?
 
 Github Profile: https://github.com/colbyrobins
 
-Contact me at: colbyr2891@gmail.com
+Email me at colbyr2891@gmail.com if you have any questions.

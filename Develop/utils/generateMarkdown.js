@@ -14,13 +14,13 @@ function renderLicenseSection(license) {
   return `This project is covered under the ${license} license.`
 }
 
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   
   const badge = renderLicenseBadge(data.license);
   const licenseSection = renderLicenseSection(data.license);
 
   return `# ${data.title}
+  
   ${badge}
 
 ## Description
@@ -58,6 +58,6 @@ Github Profile: https://github.com/${data.username}
 
 Email me at ${data.email} if you have any questions.
 `;
-}
+};
 
   module.exports = {generateMarkdown};
