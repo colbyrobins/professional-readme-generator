@@ -2,8 +2,6 @@
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
 
-## Heading 2
-
 ## Description
 
 This project was created to automate the creation of a README file for your project.
@@ -11,7 +9,6 @@ This project was created to automate the creation of a README file for your proj
 ## Table of Contents
 
 - [Professional README CLI Generator](#professional-readme-cli-generator)
-  - [Heading 2](#heading-2)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
